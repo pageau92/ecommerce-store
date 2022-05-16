@@ -1,0 +1,24 @@
+/* primary text blue: #084b6d; */
+/* light blue: #f4fcff; */
+/* light green: #f8fbf3; */
+/* light pink: #fff5f5; */
+/* light orange: #ffd698;*/
+/* white: #fff; */
+
+/* Typography:
+/*      h1: 28px; */
+/*      h2: 40px; */
+/*      h3: 54px; */
+/*      h4: 34px; */
+/*      h5: 14px; */
+
+@import "./partials/setup";
+@import "./partials/variables";
+@import "./partials/typography";
+@import "./partials/baseStyles";
+@import "./partials/nav";
+@import "./partials/header";
+@import "./partials/sections";
+@import "./partials/forms";
+@import "./partials/footer";
+@import "./partials/mediaQueries";
