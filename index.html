@@ -17,7 +17,7 @@
 
     <nav class="navBar">
         <div class="wrapper">
-            <button class="menuIcon">
+            <button class="menuButton">
                 <img src="./assets/menu-button.svg" alt="open slide-out navigation" class="menuIcon">
             </button>
             <a href="./index.html" class="logo">
@@ -40,16 +40,16 @@
         <div class="slideOutNav">
             <div class="buttonContainer">
                 <button>
-                    <img src="./assets/menu-close.svg" alt="close slide-out navigation">
+                    <img class="closeIcon" src="./assets/menu-close.svg" alt="close slide-out navigation">
                 </button>
             </div>
             <nav>
                 <ul class="mainMenu">
-                    <li><a href="./shop.html">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="menuItem"><a href="./shop.html">Shop</a></li>
+                    <li class="menuItem"><a href="#">About</a></li>
+                    <li class="menuItem"><a href="#">FAQ</a></li>
+                    <li class="menuItem"><a href="#">News</a></li>
+                    <li class="menuItem"><a href="#">Contact</a></li>
                 </ul>
                 <hr>
                 <ul class="legal">
@@ -73,6 +73,14 @@
                 <p>Sed gravida eu ac aliquam pellentesque pharetra pharetra. Augue nam facilisis tristique turpis iaculis
                     pulvinar tellus.</p>
                 <a class="button">Shop All</a>
+
+            <div class="modal" id="modal">
+
+                <div class="modalContent">
+                    <span class="close">&times;</span>
+                    <p>Complimentary shipping on orders over 150. Discount applied at checkout</p>
+                </div>
+            </div>
             </div>
         </div>
     </header>
@@ -279,6 +287,30 @@
             </div> 
         </div> 
     </footer>
+
+    <script>
+
+        var modal = document.getElementById('modal');
+
+        var button = document.getElementsByClassName('.button');
+
+        var span = document.getElementsByClassName("close")[0];
+
+        button.onclick = function() {
+            modal.style.display = 'block';
+        }
+
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+       
+    </script>
 
 </body>
 </html>
