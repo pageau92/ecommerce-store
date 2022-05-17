@@ -15,9 +15,17 @@
         </div>
     </div>
 
+    <div id="modalBackground">
+        <div id="modal">
+            <span id="closeBtn">&times;</span>
+            <p>Add 50% off first purchase with code Summer2022!</p>
+        </div>
+    </div>
+    </div>
+
     <nav class="navBar">
         <div class="wrapper">
-            <button class="menuIcon">
+            <button class="menuButton">
                 <img src="./assets/menu-button.svg" alt="open slide-out navigation" class="menuIcon">
             </button>
             <a href="./index.html" class="logo">
@@ -40,16 +48,16 @@
         <div class="slideOutNav">
             <div class="buttonContainer">
                 <button>
-                    <img src="./assets/menu-close.svg" alt="close slide-out navigation">
+                    <img class="closeIcon" src="./assets/menu-close.svg" alt="close slide-out navigation">
                 </button>
             </div>
             <nav>
                 <ul class="mainMenu">
-                    <li><a href="./shop.html">Shop</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="menuItem"><a href="./shop.html">Shop</a></li>
+                    <li class="menuItem"><a href="#">About</a></li>
+                    <li class="menuItem"><a href="#">FAQ</a></li>
+                    <li class="menuItem"><a href="#">News</a></li>
+                    <li class="menuItem"><a href="#">Contact</a></li>
                 </ul>
                 <hr>
                 <ul class="legal">
@@ -82,8 +90,8 @@
             <div class="wrapper">
                 <div class="titleBar">
                     <h2>Popular</h2>
-                    <button>Shop all</button>
-                </div>
+                    <button id="modalBtn">Shop all</button>
+                    
 
                 <div class="product">
                     <div class="productImgContainer">
@@ -279,6 +287,18 @@
             </div> 
         </div> 
     </footer>
+
+    <script>
+
+        let modalBackground = document.getElementById('modalBackground');
+
+        let closeBtn = document.getElementById('closeBtn');
+
+        closeBtn.addEventListener('click', function() {
+            modalBackground.style.display = 'none';
+        });
+     
+    </script>
 
 </body>
 </html>
