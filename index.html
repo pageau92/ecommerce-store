@@ -73,14 +73,6 @@
                 <p>Sed gravida eu ac aliquam pellentesque pharetra pharetra. Augue nam facilisis tristique turpis iaculis
                     pulvinar tellus.</p>
                 <a class="button">Shop All</a>
-
-            <div class="modal" id="modal">
-
-                <div class="modalContent">
-                    <span class="close">&times;</span>
-                    <p>Complimentary shipping on orders over 150. Discount applied at checkout</p>
-                </div>
-            </div>
             </div>
         </div>
     </header>
@@ -90,7 +82,13 @@
             <div class="wrapper">
                 <div class="titleBar">
                     <h2>Popular</h2>
-                    <button>Shop all</button>
+                    <button id="modalBtn">Shop all</button>
+                    <div id="modalBackground">
+                        <div id="modal">
+                            <span id="closeBtn">&times;</span>
+                            <p>Add 50% off first purchase with code Summer2022!</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="product">
@@ -290,25 +288,19 @@
 
     <script>
 
-        var modal = document.getElementById('modal');
+        let modalBtn = document.getElementById('modalBtn');
 
-        var button = document.getElementsByClassName('.button');
+        let modalBackground = document.getElementById('modalBackground');
 
-        var span = document.getElementsByClassName("close")[0];
+        let closeBtn = document.getElementById('closeBtn');
 
-        button.onclick = function() {
-            modal.style.display = 'block';
-        }
+        modalBtn.addEventListener('click', function() {
+            modalBackground.style.display = 'block';
+        });
 
-        span.onclick = function() {
-            modal.style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
+        closeBtn.addEventListener('click', function() {
+            modalBackground.style.display = 'none';
+        });
        
     </script>
 
